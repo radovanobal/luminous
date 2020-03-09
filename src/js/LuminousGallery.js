@@ -69,6 +69,19 @@ export default class LuminousGallery {
   }
 
   /**
+   * Opens a specific luminous
+   * @param {int} index - Index of the luminous instance you want to open in the gallery
+   * @return {void}
+   */
+  open(index = 1) {
+    const instance = this.luminousInstances[index];
+
+    if(instance != null) {
+      instance.open();
+    }
+  }
+
+  /**
    * Destroys the internal luminous instances
    * @return {void}
    */
